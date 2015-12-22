@@ -10,4 +10,5 @@ import java.net.UnknownHostException;
 public interface AccessLogService {
 
     void save(AccessLog accessLog) throws UnknownHostException;
+    String getIp(String domain) throws UnknownHostException;
 }

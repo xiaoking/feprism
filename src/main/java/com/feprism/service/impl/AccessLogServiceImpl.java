@@ -26,10 +26,10 @@ public class AccessLogServiceImpl implements AccessLogService {
         log.info(accessLog.toString() );
     }
 
-    private String getIp(String domain) throws UnknownHostException {
+    public String getIp(String domain) throws UnknownHostException {
         String ip="";
 
-        if(!domain.isEmpty() ){
+        if(domain!=null && !domain.isEmpty() ){
             InetAddress address = InetAddress.getByName(domain);
             ip = address.getHostAddress();
         }
